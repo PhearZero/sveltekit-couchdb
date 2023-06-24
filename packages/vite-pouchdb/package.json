@@ -1,0 +1,32 @@
+{
+  "name": "vite-pouchdb",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "types": "tsc"
+  },
+  "peerDependencies": {
+    "events": "^3.3.0",
+    "pouchdb": "^8.0.1",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "express-pouchdb": "^4.2.0"
+  },
+  "devDependencies": {
+    "@tsconfig/esm": "^1.0.3",
+    "@types/pouchdb": "^6.4.0",
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0",
+    "http-pouchdb": "^4.2.0",
+    "pouchdb-adapter-http": "^8.0.1",
+    "pouchdb-core": "^8.0.1",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.1"
+  }
+}

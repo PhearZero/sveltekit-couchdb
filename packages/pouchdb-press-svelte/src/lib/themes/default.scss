@@ -1,0 +1,54 @@
+@import "./options.scss";
+
+// Breakpoints
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1280px,
+        xl: null,
+);
+
+@import "@picocss/pico/scss/pico.slim";
+@import "@picocss/pico/scss/components/nav";
+@import "@picocss/pico/scss/components/card";
+@import "./layout";
+//main {
+//  max-width: 1024px;
+//}
+// Navigation
+
+
+//
+article>header, article>footer {
+  padding: 0;
+  margin-bottom: 0;
+}
+article>header>hgroup {
+  border-radius: var(--border-radius);
+  background-color: var(--modal-overlay-background-color);
+  margin: 0;
+  padding: var(--spacing);
+}
+article {
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: var(--spacing);
+}
+article>footer {
+  margin-top: 0;
+  text-align: right;
+}
+//
+//
+//@media (min-width: 992px){
+//  article>header {
+//    padding: var(--spacing)
+//  }
+//}
+@media (min-width: map-get($breakpoints, "lg")){
+.root>main {
+  max-width: map-get($breakpoints, "lg");
+  //max-width: 20px;
+}
+}

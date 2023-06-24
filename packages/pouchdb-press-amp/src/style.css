@@ -1,0 +1,17 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--background-color);
+    padding: var(--spacing);
+}
+nav > ul > li > h1 {
+    margin: 0;
+}
+nav > ul > li {
+    text-align: center;
+    padding: 0;
+}
+.unset {
+    all: unset;
+}

@@ -1,0 +1,10 @@
+  {
+    "extends": "@tsconfig/esm/tsconfig.json",
+    "compilerOptions": {
+      "allowJs": true,
+      "skipLibCheck": true,
+      "declaration": true,
+      "emitDeclarationOnly": true
+    },
+    "include": ["./index.js"]
+  }

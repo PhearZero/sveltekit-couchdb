@@ -1,0 +1,23 @@
+
+@import "pouchdb-press-svelte/themes/default.scss";
+
+$primary-500: #F44336;
+$primary-600: #E53935;
+$primary-700: #D32F2F;
+
+@import "@picocss/pico/scss/pico";
+
+.flex-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-grid .col {
+  flex: 1;
+  padding: var(--spacing);
+}
+@media (max-width: map-get($breakpoints, "lg")){
+  .flex-grid {
+    display: block;
+  }
+}

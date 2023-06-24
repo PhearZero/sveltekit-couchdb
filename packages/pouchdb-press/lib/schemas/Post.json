@@ -1,0 +1,143 @@
+{
+  "title": "Post",
+  "description": "Blog Post Schema",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "_rev": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the Post",
+      "default": "Fresh Post"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Subtitle of the Post",
+      "default": "Get started with blogging!"
+    },
+    "tags": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "featured": {
+            "type": "boolean",
+            "description": "Flag to set media as the featured image"
+          },
+          "src": {
+            "type": "string"
+          },
+          "srcset": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number",
+            "default": 2000
+          },
+          "height": {
+            "type": "number",
+            "default": 1000
+          },
+          "layout": {
+            "type": "string",
+            "default": "responsive"
+          },
+          "alt": {
+            "type": "string"
+          },
+          "attrib": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": ["name", "href"]
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "string",
+      "description": "Content of the article, can be HTML",
+      "default": "Here is an example post! \n You can edit this here"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created": {
+          "type": "number"
+        },
+        "updated": {
+          "type": "number"
+        },
+        "deleted": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "img": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string"
+        },
+        "srcset": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number",
+          "default": 2000
+        },
+        "height": {
+          "type": "number",
+          "default": 1000
+        },
+        "layout": {
+          "type": "string",
+          "default": "responsive"
+        },
+        "alt": {
+          "type": "string"
+        },
+        "attrib": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": ["name", "href"]
+        }
+      },
+      "required": ["width", "height", "alt"]
+    }
+  },
+  "required": ["_id", "title", "subtitle", "content", "tags"]
+}

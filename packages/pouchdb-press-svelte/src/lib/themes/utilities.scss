@@ -1,0 +1,18 @@
+// Utilities
+.unset {
+  all: unset;
+}
+.flex-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-grid .col {
+  flex: 1;
+  padding: var(--spacing);
+}
+@media (max-width: map-get($breakpoints, "lg")){
+  .flex-grid {
+    display: block;
+  }
+}
